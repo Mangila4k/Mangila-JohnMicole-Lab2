@@ -1,0 +1,54 @@
+<?php
+
+require_once 'vendor/autoload.php';
+
+use Aries\Dbmodel\Models\User;
+
+session_start();
+
+// Usage example
+$user = new User();
+
+// checks if the button is clicked and the form is submitted. If true, run the createUser() function from our User class
+// Then pass in an array of data to the createUser class since createUser accepts an array of data
+if(isset($_POST['submit'])) {
+    $user_info = $user->login([
+        'username' => $_POST['username'],
+    ]);
+
+    if($user_info && password_verify($_POST['password'], $user_info['password'])) {
+        $_SESSION['users'] = $user_info;
+        header('Location: index.php');
+        exit;
+    } else {
+        $message = 'Invalid username or password';
+    }
+}
+
+if(isset($_SESSION['users']) && !empty($_SESSION['users'])) {
+    header('Location: index.php');
+    exit;
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <div class = "login-form">
+        <form method="POST" action="login.php">
+            <h1>Login</h1>
+            <?php echo isset($message) ? $message : ''; ?>
+            <input type="username" name="username" id="" placeholder="Username">
+            <input type="password" name="password" placeholder="Password">
+            <p>Don't have an account? <a href="register.php">Register here</a>.</p>
+            <input type="submit" name="submit" value="Submit">
+        </form>
+    </div>
+    
+</body>
+</html>
