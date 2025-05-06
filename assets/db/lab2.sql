@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 21, 2025 at 05:14 AM
+-- Generation Time: May 06, 2025 at 09:45 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -41,12 +41,7 @@ CREATE TABLE `posts` (
 --
 
 INSERT INTO `posts` (`id`, `title`, `content`, `author_id`, `created_at`, `updated_at`) VALUES
-(3, 'ughh', 'ughhhhhhhhhhhhhhhhh', 10, '2025-04-13 12:08:13', NULL),
-(4, 'Sarap', 'sarap mo markj\r\n', 11, '2025-04-13 12:08:13', NULL),
-(5, 'BAYOT KO', 'AKO AY ISANG BADING', 12, '2025-04-13 12:08:13', NULL),
-(6, 'Arl Sison', 'ughhhh ughh guh', 13, '2025-04-16 01:04:17', NULL),
-(7, 'wtf', 'a;sdlfkjsdflkj', 4, '2025-04-21 03:06:36', NULL),
-(8, 'zvxc', 'dsfsaf', 4, '2025-04-21 03:09:14', NULL);
+(9, 'amaw', 'clyde hahahahah', 15, '2025-05-06 07:39:13', NULL);
 
 -- --------------------------------------------------------
 
@@ -69,13 +64,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `password`, `created_at`, `updated_at`) VALUES
-(4, 'Markj', 'Cortes', 'markj', '$2y$10$wagaeHx2fx4sKV5kUJSs5OTxzWFd7FdW.uL7tbwyvNs9VZkEi5O9i', '2025-04-13 12:06:58', NULL),
-(5, 'test', 'test', 'test', '$2y$10$OQHSXyV6SHcuvQPSZqvgc.2FVC5le4ZrnnYVYBRcOuFAKOsedwx5e', '2025-04-13 12:06:58', NULL),
-(10, 'Rashid', 'Tapales', 'Snezhy', '$2y$10$fccSwKvDyLFqtwqO/WmKD.3NXSDrApp3GH.vMIK.LIvryKyKbPe7e', '2025-04-13 12:06:58', NULL),
-(11, 'Axci', 'Cabusas', 'sumkai', '$2y$10$RuTxNPPePuK.3AFyti7DQuEqIr78QiiCkVqDRR7oyPr8H4hfzwkSO', '2025-04-13 12:06:58', NULL),
-(12, 'Aljon', 'Paragoso', 'aljon', '$2y$10$8etoXwUcenOJ89Zm.go96O8na4leMBHrtQXT58pWmPPCMfjZ4L5Ky', '2025-04-13 12:06:58', NULL),
-(13, 'Axcee', 'Cabusas', 'axcee1234', '$2y$10$LZUpQ8jHyYTR8XQPJeBBLu/95P/VFCMpXwztuMgTWN5AYTXHR3oP6', '2025-04-16 01:03:28', NULL),
-(14, 'test', 'etst', 'test1', '$2y$10$hnKKWxSngbs8.oaF12PZfenUrbyoKqlbE9nU6jE1eds0Vnvr/Iq6K', '2025-04-21 03:12:02', NULL);
+(15, 'micole', 'coleme', 'mememe', '$2y$10$1kIHmVdlhtJk0UrJXymcu.1fZI88Y0sYlZvKjx9uQtgW5JMlpqJBm', '2025-05-06 07:34:09', NULL);
 
 --
 -- Indexes for dumped tables
@@ -102,13 +91,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Constraints for dumped tables
